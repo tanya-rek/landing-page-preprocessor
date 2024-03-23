@@ -1,0 +1,186 @@
+@use "./index.scss" as *;
+
+:root {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  background-color: $mainBgColor;
+  padding: 20px 70px 190px 180px;
+}
+
+// Helper Classes
+
+.btnNoneBorder {
+  border: none;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+@mixin d-flex-spaceEvenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+// Header
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  ul {
+    width: 27%;
+    @include d-flex-spaceEvenly;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    font-weight: $font-weight-medium;
+
+    button {
+      cursor: pointer;
+    }
+
+    .demo-btn {
+      width: 183px;
+      height: 43px;
+      border-radius: 4px;
+      background-color: $primaryColor;
+
+      i {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// Main
+
+.main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-top: 110px;
+}
+
+.form {
+  max-width: 480px;
+  min-height: 648px;
+  padding: 50px;
+  background-color: $whiteColor;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: $font-weight-bold;
+    font-size: 40px;
+    margin: 0;
+  }
+
+  h2 {
+    color: $lightGreyColor;
+    opacity: 0.6;
+    font-weight: $fontWeight-regular;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 3px;
+    line-height: 32px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.signin-form--container {
+  width: 100%;
+  height: 50%;
+  @include d-flex-spaceEvenly;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  input {
+    height: 48px;
+    padding-left: 24px;
+    border-radius: 8px;
+    border: 1px $darkGreyColor solid;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &::placeholder {
+      color: $greyColor;
+      letter-spacing: 2px;
+      font-weight: $fontWeight-regular;
+      font-size: 16px;
+    }
+  }
+
+  button {
+    background-color: $primaryColor;
+    height: 48px;
+    color: $whiteColor;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: $font-weight-medium;
+    margin-top: 32px;
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: $greyColor;
+    font-weight: $font-weight-medium;
+    margin-left: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: $blackColor;
+    }
+  }
+}
+
+.signin-options {
+  width: 100%;
+  height: 50%;
+  @include d-flex-spaceEvenly;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 14px;
+
+  p {
+    font-weight: $font-weight-medium;
+  }
+
+  span {
+    font-weight: $font-weight-medium;
+  }
+
+  a {
+    text-decoration: none;
+    color: $blackColor;
+    font-weight: $font-weight-bold;
+  }
+}
+
+.social-media-buttons--container {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.social-media-btn {
+  width: 120px;
+  border-radius: 50px;
+  font-size: 14px;
+  background-color: $whiteColor;
+  font-weight: $font-weight-bold;
+  cursor: pointer;
+}
